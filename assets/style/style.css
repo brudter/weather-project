@@ -1,0 +1,19 @@
+* {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(83, 122, 252);
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+main h2 {
+    color: navy;
+    font-weight: 600;
+}
