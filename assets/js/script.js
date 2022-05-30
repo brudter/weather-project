@@ -1,17 +1,4 @@
-// history
 
-var button = document.querySelector("#saveCity");
-var tasks = document.querySelector("#history");
-
-var listCity = function() {
-  var listItem = document.createElement("li");
-  listItem.className = "task-item";
-  listItem.textContent = "example text.";
-  tasks.appendChild(listItem);
-};
-button.addEventListener("click", listCity);
-
-// getting the weather
 
 document.querySelector('button').addEventListener('click',handleClick);
 
