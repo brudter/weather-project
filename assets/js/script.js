@@ -1,4 +1,42 @@
+// search history
 
+var formEl = document.querySelector("#saveCity"); 
+var tasksToDoEl = document.querySelector("#history"); 
+
+var taskFormHandler = function(event) {
+  event.preventDefault();
+  var taskNameInput = document.querySelector("input[name='search']").value;
+
+  if (taskNameInput === "") {
+    return false; 
+  }
+
+  formEl.reset();
+  document.querySelector("input[name='search']").value = "";
+
+  var taskDataObj = {
+    name: taskNameInput
+  };
+
+  createTaskEl(taskDataObj);
+};
+
+var createTaskEl = function(taskDataObj) {
+
+  var listItemEl = document.createElement("li");
+  listItemEl.className = "task-item";
+
+  var taskInfoEl = document.createElement("button");
+  taskInfoEl.innerHTML = "<h3 class='task-name'>" + taskDataObj.name + "</h3><span class='task-type'>";
+  listItemEl.appendChild(taskInfoEl);
+
+  console.dir(listItemEl);
+  tasksToDoEl.appendChild(listItemEl);
+};
+
+formEl.addEventListener("submit", taskFormHandler);
+
+// weather search
 
 document.querySelector('button').addEventListener('click',handleClick);
 

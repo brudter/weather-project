@@ -22,3 +22,11 @@ main h4 {
     color: navy;
     font-weight: 600;
 }
+
+ul li {
+    list-style: none;
+}
+
+button {
+    color: navy;
+}
